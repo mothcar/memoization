@@ -10,7 +10,7 @@ function Home () {
 
   return (
     <>
-      <div>Home</div>
+      <div style={{margin:'20px'}}>Home</div>
       <div>
         <button onClick={() => setGoToAbout(true)}>About</button>
       </div>

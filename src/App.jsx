@@ -24,7 +24,7 @@ function App() {
  
   return (
     <div className="App">
-      <div>
+      <div style={{margin:'20px'}}>
         {number}
         
         <h3>어려운 계산기</h3>
@@ -33,12 +33,13 @@ function App() {
           type="number"
           value={hardNumber}
           onChange={(e)=>{setHardNumber(parseInt(e.target.value))}}
+          style={{margin:'20px'}}
         />
 
         <span> + 1000 = {hardSum} </span>
 
         <div>
-         <button onClick={()=>{setDark((e)=>!e)}}>Change Theme</button>
+         <button  style={{margin:'20px'}} onClick={()=>{setDark((e)=>!e)}}>Change Theme</button>
         </div>
         <div style={myTheme}> This is Our Theme </div>
       </div>
