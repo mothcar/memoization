@@ -1,5 +1,8 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Navigate, Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css'
+import About from './pages/About.jsx';
+import Home from './pages/Home.jsx';
 
 function calculate() {
   console.log('web is rerendered....')
@@ -18,11 +21,13 @@ function App() {
     color : isDark?'white':'black'
   }
 
+ 
   return (
     <div className="App">
       <div>
         {number}
-        <h1>어려운 계산기</h1>
+        
+        <h3>어려운 계산기</h3>
 
         <input
           type="number"
@@ -37,6 +42,15 @@ function App() {
         </div>
         <div style={myTheme}> This is Our Theme </div>
       </div>
+
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/about' element={<About/>}/>
+          
+
+        </Routes>
+      </Router>
       
     </div>
   )
